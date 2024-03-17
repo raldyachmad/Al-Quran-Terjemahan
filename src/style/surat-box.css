@@ -24,13 +24,14 @@
   border-bottom: 1px solid var(--tertiary-color);
 }
 .arabic {
-  font-family: "Scheherazade New", serif;
+  font-family: "Amiri", serif;
 }
+
 .ayah-list .arabic {
   font-size: 2rem;
   text-align: right;
   margin-bottom: 40px;
-  line-height: 3.5rem;
+  line-height: 5rem;
 }
 
 .latin {
