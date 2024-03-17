@@ -4,3 +4,6 @@ footer {
   color: var(--gray-color);
   opacity: 0.2;
 }
+a{
+  color: inherit;
+}
