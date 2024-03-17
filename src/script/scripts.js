@@ -1,6 +1,10 @@
 $("document").ready(() => {
   $("span.menu").click(() => {
-    // alert("jalan");
+    if ($("span.menu").text() == "menu") {
+      $("span.menu").text("close");
+    } else {
+      $("span.menu").text("menu");
+    }
     $(".box-menu").toggleClass("active");
   });
   let nomorSurah;
