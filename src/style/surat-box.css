@@ -23,12 +23,13 @@
   margin-bottom: 14px;
   border-bottom: 1px solid var(--tertiary-color);
 }
-
+.arabic {
+  font-family: "Scheherazade New", serif;
+}
 .ayah-list .arabic {
   font-size: 2rem;
   text-align: right;
   margin-bottom: 40px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   line-height: 3.5rem;
 }
 
