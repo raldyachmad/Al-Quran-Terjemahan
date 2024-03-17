@@ -4,6 +4,7 @@
 @import url(list-menu.css);
 @import url(surat-box.css);
 @import url(media-query.css);
+@import url(footer.css);
 
 * {
   padding: 0;
