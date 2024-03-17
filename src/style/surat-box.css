@@ -1,0 +1,47 @@
+.container {
+  width: 50%;
+  margin: auto;
+  display: none;
+}
+.surah-box {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  margin-top: 90px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 8px solid var(--accent-color);
+}
+
+.surah-box h2 {
+  color: var(--white-color);
+  margin-bottom: 8px;
+}
+
+.ayah-list {
+  padding: 40px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
+.ayah-list .arabic {
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 3.5rem;
+}
+
+.latin {
+  font-style: italic;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.arti {
+  margin-top: 16px;
+}
+hr {
+  opacity: 0.2;
+  z-index: -1;
+}

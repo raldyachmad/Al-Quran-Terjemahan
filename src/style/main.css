@@ -1,0 +1,15 @@
+@import url(color.css);
+@import url(navbar.css);
+@import url(list-menu.css);
+@import url(surat-box.css);
+@import url(media-query.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  color: var(--black-color);
+}

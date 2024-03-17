@@ -1,0 +1,21 @@
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 16px;
+  }
+  .ayah-list {
+    padding: 40px 8px;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2,
+  h2 .arabic {
+    font-size: 1.2rem;
+  }
+  .surah-box {
+    padding: 16px;
+    margin-top: 56px;
+  }
+}
