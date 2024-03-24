@@ -88,8 +88,8 @@ $(document).ready(() => {
               <b><i class="latin">${res.data.ayat[i].teksLatin}</i></b>
               <p class="arti">"${res.data.ayat[i].teksIndonesia}"</p>
               <div class="btn-group me-2" role="group" aria-label="First group">
-                  <button class="btn  px-1 py-0 toggleButton" data-audio="${audioId}"><i class="bi bi-play-fill"></i></button>
-                  <button class="btn  px-1 py-0 copy-button" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-copy"></i></button>
+                  <button class="btn  px-1 py-0 toggleButton me-2" data-audio="${audioId}"><i class="bi bi-play-fill"></i></button>
+                  <button class="btn  px-1 py-0 copy-button ms-2" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-copy"></i></button>
                   <audio src="${audioSrc}" id="${audioId}"></audio>
               </div>
               <hr />
