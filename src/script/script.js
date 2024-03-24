@@ -72,7 +72,7 @@ $(document).ready(() => {
               <hr />
               </div>`);
         }
-        console.log(res.data);
+        $("title").text(res.data.namaLatin);
         $("#surah-box").append(`
               <h2><span id="namaSurah">${res.data.namaLatin}</span> - <span class="arabic">${res.data.nama}</span></h2>
               <p>Surah ke-${res.data.nomor} - ${res.data.jumlahAyat} Ayat - ${res.data.tempatTurun}</p>
