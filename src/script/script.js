@@ -49,7 +49,7 @@ $(document).ready(() => {
       // Event handler untuk meng-handle klik pada tombol-tombol surah
       $(".surah").click(function () {
         nomorSurah = $(this).find(".no-surah").text();
-        window.location.href = `./hasil/?nomorSurah=${nomorSurah}`;
+        window.location.href = `./hasil/index.html?nomorSurah=${nomorSurah}`;
       });
     },
     error: function (xhr, status, error) {
@@ -174,10 +174,10 @@ $(document).ready(() => {
       $("#suratSetelahnya").hide();
     }
     $("#suratSebelumnya").click(() => {
-      window.location.href = `?nomorSurah=${eval(Number(nomorSurah) - 1)}`;
+      window.location.href = `index.html?nomorSurah=${eval(Number(nomorSurah) - 1)}`;
     });
     $("#suratSetelahnya").click(() => {
-      window.location.href = `?nomorSurah=${eval(Number(nomorSurah) + 1)}`;
+      window.location.href = `index.html?nomorSurah=${eval(Number(nomorSurah) + 1)}`;
     });
   }
 });
