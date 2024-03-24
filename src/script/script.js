@@ -100,12 +100,10 @@ $(document).ready(() => {
         // Event handler untuk tombol "Copy"
         $(".copy-button").click(function () {
           // Menemukan teks yang akan disalin
-          const textToCopy = `${$(this).closest(".ayat-list").find(".arabic").text()}\n${$(this).closest(".ayat-list").find(".latin").text()}\n${$(this).closest(".ayat-list").find(".arti").text()}\n(Q.S ${$("#namaSurah").text()} - Ayat ${$(
-            this
-          )
+          const textToCopy = `Allah Subhanahu Wa Ta'ala berfirman:\n\n${$(this).closest(".ayat-list").find(".arabic").text()}\n${$(this).closest(".ayat-list").find(".latin").text()}\n${$(this)
             .closest(".ayat-list")
-            .find("#no-ayat")
-            .text()})`;
+            .find(".arti")
+            .text()}\n(Q.S. ${$("#namaSurah").text()} - Ayat ${$(this).closest(".ayat-list").find("#no-ayat").text()})\n\nVia Al-Quran Terjemahan:\nhttps://al-quran-terjemahan.vercel.app/`;
 
           // Membuat elemen textarea sementara untuk menyalin teks
           const tempTextArea = $("<textarea>");
