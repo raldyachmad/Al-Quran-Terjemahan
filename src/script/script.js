@@ -7,7 +7,6 @@ $(document).ready(() => {
     } else {
       $(".scrollToTop").hide();
       $(".scrollToTop").removeClass("d-flex");
-      // $(".scrollToTop").fadeOut();
     }
   });
   $(".scrollToTop").click(function () {
@@ -31,31 +30,33 @@ $(document).ready(() => {
   let nomorSurah = 0;
 
   // Ajax untuk mengambil daftar surah dari API
-  $.ajax({
-    url: "https://equran.id/api/v2/surat",
-    type: "GET",
-    success: function (res) {
-      for (let i in res.data) {
-        // Menambahkan tombol-tombol surah ke dalam #namaSurah
-        $("#namaSurah").append(`
+  if ($("title").text() == "Al Quran Terjemahan") {
+    $.ajax({
+      url: "https://equran.id/api/v2/surat",
+      type: "GET",
+      success: function (res) {
+        for (let i in res.data) {
+          // Menambahkan tombol-tombol surah ke dalam #namaSurah
+          $("#namaSurah").append(`
           <div class="col-sm-4 p-2">
             <a class="btn btn-outline-dark d-block px-3 py-3 w-100 text-start surah" id="surah${res.data[i].nomor}">
               <span class="no-surah">${res.data[i].nomor}</span>. ${res.data[i].namaLatin}
             </a>
           </div>
         `);
-      }
+        }
 
-      // Event handler untuk meng-handle klik pada tombol-tombol surah
-      $(".surah").click(function () {
-        nomorSurah = $(this).find(".no-surah").text();
-        window.location.href = `./hasil/index.html?nomorSurah=${nomorSurah}`;
-      });
-    },
-    error: function (xhr, status, error) {
-      console.error("Error:", error);
-    },
-  });
+        // Event handler untuk meng-handle klik pada tombol-tombol surah
+        $(".surah").click(function () {
+          nomorSurah = $(this).find(".no-surah").text();
+          window.location.href = `./hasil/?nomorSurah=${nomorSurah}`;
+        });
+      },
+      error: function (error) {
+        console.error("Error:", error);
+      },
+    });
+  }
   nomorSurah = new URLSearchParams(window.location.search).get("nomorSurah");
   if (nomorSurah && $("title").text() != "Al Quran Terjemahan") {
     $.ajax({
@@ -163,7 +164,7 @@ $(document).ready(() => {
         });
         // akhir tombol audio
       },
-      error: function (xhr, status, error) {
+      error: function (error) {
         console.error("Error:", error);
       },
     });
@@ -174,10 +175,10 @@ $(document).ready(() => {
       $("#suratSetelahnya").hide();
     }
     $("#suratSebelumnya").click(() => {
-      window.location.href = `index.html?nomorSurah=${eval(Number(nomorSurah) - 1)}`;
+      window.location.href = `?nomorSurah=${eval(Number(nomorSurah) - 1)}`;
     });
     $("#suratSetelahnya").click(() => {
-      window.location.href = `index.html?nomorSurah=${eval(Number(nomorSurah) + 1)}`;
+      window.location.href = `?nomorSurah=${eval(Number(nomorSurah) + 1)}`;
     });
   }
 });
