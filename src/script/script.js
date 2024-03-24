@@ -69,6 +69,11 @@ $(document).ready(() => {
               <p class="arabic mb-5">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
               <b><i class="latin">bismillāhir-raḥmānir-raḥīm(i).</i></b>
               <p class="arti">"Dengan nama Allah Yang Maha Pengasih, Maha Penyayang."</p>
+              <div class="btn-group me-2" role="group" aria-label="First group">
+                  <button class="btn  px-1 py-0 toggleButton me-2" data-audio="audio-1"><i class="bi bi-play-fill"></i></button>
+                  <button class="btn  px-1 py-0 copy-button ms-2" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-copy"></i></button>
+                  <audio src="https://equran.nos.wjv-1.neo.id/audio-partial/Misyari-Rasyid-Al-Afasi/001001.mp3" id="audio-1"></audio>
+              </div>
               <hr />
               </div>`);
         }
