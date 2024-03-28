@@ -28,6 +28,7 @@ $(document).ready(() => {
   );
   observer.observe(heroElement);
   let nomorSurah = 0;
+  $("#loader").hide();
 
   // Ajax untuk mengambil daftar surah dari API
   if ($("title").text() == "Al Quran Terjemahan") {
@@ -35,7 +36,7 @@ $(document).ready(() => {
       url: "https://equran.id/api/v2/surat",
       type: "GET",
       success: function (res) {
-        $("#loader").removeClass("d-none");
+        $("#loader").fadeIn();
         for (let i in res.data) {
           // Menambahkan tombol-tombol surah ke dalam #namaSurah
           $("#namaSurah").append(`
@@ -52,7 +53,7 @@ $(document).ready(() => {
           nomorSurah = $(this).find(".no-surah").text();
           window.location.href = `./hasil/?nomorSurah=${nomorSurah}`;
         });
-        $("#loader").addClass("d-none");
+        $("#loader").hide();
       },
       error: function (error) {
         console.error("Error:", error);
@@ -65,7 +66,7 @@ $(document).ready(() => {
       url: `https://equran.id/api/v2/surat/${nomorSurah}`,
       type: "GET",
       success: function (res) {
-        $("#loader").removeClass("d-none");
+        $("#loader").fadeIn();
         if (nomorSurah != "1" && nomorSurah != "9") {
           $("#ayat").append(`<div class="ayat-list">
               <p></p>
@@ -169,7 +170,7 @@ $(document).ready(() => {
         });
         // akhir tombol audio
 
-        $("#loader").addClass("d-none");
+        $("#loader").hide();
       },
       error: function (error) {
         console.error("Error:", error);
