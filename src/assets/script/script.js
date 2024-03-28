@@ -5,7 +5,7 @@ $(document).ready(() => {
       $(".scrollToTop").fadeIn();
       $(".scrollToTop").addClass("d-flex");
     } else {
-      $(".scrollToTop").hide();
+      $(".scrollToTop").fadeOut();
       $(".scrollToTop").removeClass("d-flex");
     }
   });
