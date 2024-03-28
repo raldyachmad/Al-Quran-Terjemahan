@@ -32,11 +32,11 @@ $(document).ready(() => {
 
   // Ajax untuk mengambil daftar surah dari API
   if ($("title").text() == "Al Quran Terjemahan") {
+    $("#loader").fadeIn();
     $.ajax({
       url: "https://equran.id/api/v2/surat",
       type: "GET",
       success: function (res) {
-        $("#loader").fadeIn();
         for (let i in res.data) {
           // Menambahkan tombol-tombol surah ke dalam #namaSurah
           $("#namaSurah").append(`
@@ -53,7 +53,7 @@ $(document).ready(() => {
           nomorSurah = $(this).find(".no-surah").text();
           window.location.href = `./hasil/?nomorSurah=${nomorSurah}`;
         });
-        $("#loader").hide();
+        $("#loader").fadeOut();
       },
       error: function (error) {
         console.error("Error:", error);
@@ -170,7 +170,7 @@ $(document).ready(() => {
         });
         // akhir tombol audio
 
-        $("#loader").hide();
+        $("#loader").fadeOut();
       },
       error: function (error) {
         console.error("Error:", error);
