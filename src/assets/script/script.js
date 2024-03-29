@@ -170,7 +170,7 @@ $(document).ready(() => {
         });
         // akhir tombol audio
 
-        $("#loader").fadeOut();
+        $("#loader").hide();
       },
       error: function (error) {
         console.error("Error:", error);
